@@ -1,0 +1,31 @@
+{
+  "name": "pubg",
+  "version": "1.0.0",
+  "description": "Читы плохо",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx gulp",
+    "build": "npx gulp build"
+  },
+  "keywords": [
+    "Читы",
+    "ПАБГ",
+    "PUBG"
+  ],
+  "author": "Kirill Naumenko",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.49.9"
+  }
+}
