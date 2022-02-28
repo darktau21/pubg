@@ -32,7 +32,7 @@ function scripts() {
 
 // Стили
 function styles() {
-  return src('src/styles.sass') // Выбираем источник
+  return src('src/style.sass') // Выбираем источник
     .pipe(sassglob()) // Подрубаем плагин для подключения сразу кучи файлов (поддержка путей вида /papka/**/*)
     .pipe(sass({ 'include css': true })) // Подрубаем препроцессор
     .pipe(autoprefixer()) // Создадим префиксы с помощью Autoprefixer
@@ -47,7 +47,7 @@ function styles() {
 }
 
 async function images() {
-  return src('src/img/**/*.{jpg, jpeg,png,svg,gif}') // Берём все изображения из папки источника
+  return src('src/img/*.{jpg,jpeg,png,svg,gif}') // Берём все изображения из папки источника
     .pipe(
       imagecomp([
         imagecomp.gifsicle({ interlaced: true }),
