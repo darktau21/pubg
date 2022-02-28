@@ -1,0 +1,12 @@
+@mixin font($font-family, $font-style, $font-weight, $font-src)
+  @font-face
+    font-family: $font-family
+    font-style: $font-style
+    font-weight: $font-weight
+    src: url('fonts/#{$font-src}.woff2') format('woff2'), url('fonts/#{$font-src}.ttf') format('ttf')
+
+@include font('Montserrat', normal, 400, Montserrat-Regular)
+@include font('Montserrat', normal, 500, Montserrat-Medium)
+@include font('Montserrat', normal, 600, Montserrat-SemiBold)
+@include font('Montserrat', normal, 700, Montserrat-Bold)
+@include font('Montserrat', normal, 800, Montserrat-ExtraBold)
