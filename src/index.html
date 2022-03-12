@@ -10,9 +10,10 @@
   <body>
     <header class="header">
       <div class="wrapper">
-        <div class="logo">Logo</div>
         <nav class="main-menu">
-          <ul class="main-menu__list">
+          <div class="main-menu__mobile-btn js-mobile-btn"></div>
+          <div class="logo">Logo</div>
+          <ul class="main-menu__list js-menu-list">
             <li class="main-menu__item">
               <a href="#" class="main-menu__link main-menu__link_current">Главная</a>
             </li>
@@ -31,47 +32,60 @@
             <li class="main-menu__item">
               <a href="#" class="main-menu__link">Функционал</a>
             </li>
-            <li class="main-menu__item">
-              <select name="language" id="language">
-                <option value="rus">Русский</option>
-                <option value="ua">Українська</option>
-                <option value="eng">English</option>
-              </select>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Войти</a>
-            </li>
           </ul>
+          <div class="main-menu__btns">
+            <div class="main-menu__lang js-lang-switcher">
+              <div class="main-menu__current-lang">
+                <img class="main-menu__flag" src="img/ru_flag.svg" alt="ru" />
+                <span>RU</span>
+                <img class="main-menu__carret-down" src="img/carret_down.svg" alt="Раскрыть" />
+              </div>
+              <ul class="main-menu__lang-list js-lang-list">
+                <li class="ru">
+                  <img class="main-menu__flag" src="img/ru_flag.svg" alt="ru" /> <span>RU</span>
+                </li>
+                <li class="ua">UA</li>
+                <li class="en">EN</li>
+              </ul>
+            </div>
+            <div class="main-menu__login"></div>
+          </div>
         </nav>
       </div>
       <section class="promo">
         <div class="wrapper">
           <div class="promo__text">
-            <h1 class="promo__title">Читы на PUBG<br />Лучшие на рынке<br />Без бана!</h1>
+            <h1 class="promo__title">
+              <span></span> Читы на PUBG<br />Лучшие на рынке<br />Без бана!
+            </h1>
             <p class="promo__advantages">
               Лучшие сборки на рынке, проверенные опытом и временем, а также, оптимальное
               соотношение цены, надежности и производительности<br /><br />Самая низкая цена за
               мегахеш
             </p>
             <div class="btns">
-              <a href="" class="btn btn_color-yellow">Купить</a>
-              <a href="" class="btn btn_color-red">Посмотреть видео</a>
+              <a href="#" class="btn btn_color-yellow">Купить</a>
+              <a href="#" class="btn">Посмотреть видео</a>
             </div>
           </div>
-          <div class="promo__img"><img src="#" alt="Машинка" /></div>
         </div>
       </section>
+      <div class="header__wave">
+        <div class="wrapper">
+          <div class="header__stuff"></div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="functions">
         <div class="wrapper">
           <div class="functions__preview">
             <ul class="os-list">
-              <li class="os-list__item">Windows</li>
-              <li class="os-list__item">Android</li>
-              <li class="os-list__item">IOS</li>
+              <li class="os-list__item os-list__item_win">Windows</li>
+              <li class="os-list__item os-list__item_android">Android</li>
+              <li class="os-list__item os-list__item_ios">iOS</li>
             </ul>
-            <div class="functions__image"><img src="" alt="" /></div>
+            <div class="functions__image"><img src="img/iphone.png" alt="iphone" /></div>
             <div class="functions__paginator"></div>
           </div>
           <div class="functions__text">
@@ -89,122 +103,151 @@
               </li>
               <li class="functions__item"><b>Drop</b> - показывает топовые вещи сквозь стены.</li>
             </ul>
-            <div class="functions__alert">
-              <img src="" alt="Внимание" srcset="" />
-              <span>Рекомендуем, оставить стандартные параметры в чите</span>
-            </div>
+            <div class="functions__alert">Рекомендуем, оставить стандартные параметры в чите</div>
             <div class="btns">
-              <a href="" class="btn btn_color-yellow">Купить</a>
-              <a href="" class="btn btn_color-red">Посмотреть видео</a>
+              <a href="#" class="btn btn_color-yellow">Купить</a>
+              <a href="#" class="btn btn_color-red">Посмотреть видео</a>
             </div>
           </div>
         </div>
       </section>
       <section class="reviews">
         <div class="wrapper">
-          <h2 class="reviews__title">Что говорят о нас</h2>
-          <div class="reviews__paginator reviews__paginator_prev"></div>
-          <blockquote class="reviews__item">
-            <div class="reviews__avatar"><img src="" alt="Аватар поьзователя" /></div>
-            <div class="reviews__name">Егор Черняев</div>
-            <p class="reviews__content">
-              Рекомендую данный софт! Аналогов не нашел нигде, я решил не заморачиваться и сразу
-              приобрел ПРО версию и теперь играю в свое удовольствие.
-            </p>
-          </blockquote>
-          <div class="reviews__paginator reviews__paginator_next"></div>
+          <h2 class="reviews__title"><span></span> Что говорят о нас</h2>
+          <div class="reviews__container">
+            <div class="reviews__paginator reviews__paginator_prev"></div>
+            <blockquote class="reviews__item">
+              <div class="reviews__avatar"></div>
+              <div class="reviews__name">Егор Черняев</div>
+              <p class="reviews__content">
+                Рекомендую данный софт! Аналогов не нашел нигде, я решил не заморачиваться и сразу
+                приобрел ПРО версию и теперь играю в свое удовольствие.
+              </p>
+            </blockquote>
+            <div class="reviews__paginator reviews__paginator_next"></div>
+          </div>
         </div>
       </section>
       <section class="tariffs">
         <div class="wrapper">
           <h2 class="tariffs__title">Тарифы</h2>
-          <div class="tariff">
-            <h3 class="tariff__title">Обычная</h3>
-            <div class="tariff__duration">1 месяц</div>
-            <ul class="tariff_adv-list">
-              <li class="tariff_item">Весь функционал чита</li>
-              <li class="tariff_item">Обновления 1 раз в месяц</li>
-              <li class="tariff_item">Техническая поддержка</li>
-              <li class="tariff_item">Анти-Бан</li>
-              <li class="tariff_item">Улучшенная оптимизация</li>
-              <li class="tariff_item">Запуск на других телефонах</li>
-              <li class="tariff_item">DPI+, ASN, SKK</li>
-            </ul>
-            <div class="tariff__price">649 <em>₽</em></div>
-            <a href="" class="btn btn_color-yellow">Приобрести</a>
-          </div>
-          <div class="tariff">
-            <h3 class="tariff__title">Стандартная</h3>
-            <div class="tariff__duration">3 месяца</div>
-            <ul class="tariff_adv-list">
-              <li class="tariff_item">Весь функционал чита</li>
-              <li class="tariff_item">Обновления 1 раз в месяц</li>
-              <li class="tariff_item">Техническая поддержка</li>
-              <li class="tariff_item">Анти-Бан</li>
-              <li class="tariff_item">Улучшенная оптимизация</li>
-              <li class="tariff_item">Запуск на других телефонах</li>
-              <li class="tariff_item">DPI+, ASN, SKK</li>
-            </ul>
-            <div class="tariff__price">649 <em>₽</em></div>
-            <a href="" class="btn btn_color-yellow">Приобрести</a>
-          </div>
-          <div class="tariff">
-            <h3 class="tariff__title">Pro Версия</h3>
-            <div class="tariff__duration">Навсегда</div>
-            <ul class="tariff_adv-list">
-              <li class="tariff_item">Весь функционал чита</li>
-              <li class="tariff_item">Обновления 1 раз в месяц</li>
-              <li class="tariff_item">Техническая поддержка</li>
-              <li class="tariff_item">Анти-Бан</li>
-              <li class="tariff_item">Улучшенная оптимизация</li>
-              <li class="tariff_item">Запуск на других телефонах</li>
-              <li class="tariff_item">DPI+, ASN, SKK</li>
-            </ul>
-            <div class="tariff__price">649 <em>₽</em></div>
-            <a href="" class="btn btn_color-yellow">Приобрести</a>
+          <ul class="os-list">
+            <li class="os-list__item os-list__item_win">Windows</li>
+            <li class="os-list__item os-list__item_android">Android</li>
+            <li class="os-list__item os-list__item_ios">iOS</li>
+          </ul>
+          <div class="tariffs__container">
+            <div class="tariff">
+              <h3 class="tariff__title tariff__title_gradient-blue">Обычная</h3>
+              <div class="tariff__duration">1 месяц</div>
+              <ul class="tariff__adv-list">
+                <li class="tariff__item tariff__item_unlocked">Весь функционал чита</li>
+                <li class="tariff__item tariff__item_unlocked">Обновления 1 раз в месяц</li>
+                <li class="tariff__item tariff__item_unlocked">Техническая поддержка</li>
+                <li class="tariff__item tariff__item_unlocked">Анти-Бан</li>
+                <li class="tariff__item tariff__item_locked">Улучшенная оптимизация</li>
+                <li class="tariff__item tariff__item_locked">Запуск на других телефонах</li>
+                <li class="tariff__item tariff__item_locked">DPI+, ASN, SKK</li>
+              </ul>
+              <div class="tariff__price">649 <em>₽</em></div>
+              <a href="" class="tariff__buy-btn">Приобрести</a>
+            </div>
+            <div class="tariff">
+              <h3 class="tariff__title tariff__title_gradient-pink">Стандартная</h3>
+              <div class="tariff__duration">3 месяца</div>
+              <ul class="tariff__adv-list">
+                <li class="tariff__item tariff__item_unlocked">Весь функционал чита</li>
+                <li class="tariff__item tariff__item_unlocked">Обновления 1 раз в месяц</li>
+                <li class="tariff__item tariff__item_unlocked">Техническая поддержка</li>
+                <li class="tariff__item tariff__item_unlocked">Анти-Бан</li>
+                <li class="tariff__item tariff__item_unlocked">Улучшенная оптимизация</li>
+                <li class="tariff__item tariff__item_unlocked">Запуск на других телефонах</li>
+                <li class="tariff__item tariff__item_locked">DPI+, ASN, SKK</li>
+              </ul>
+              <div class="tariff__price">1499 <em>₽</em></div>
+              <a href="" class="tariff__buy-btn">Приобрести</a>
+            </div>
+            <div class="tariff">
+              <h3 class="tariff__title tariff__title_gradient-red">Pro Версия</h3>
+              <div class="tariff__duration">Навсегда</div>
+              <ul class="tariff__adv-list">
+                <li class="tariff__item tariff__item_unlocked">Весь функционал чита</li>
+                <li class="tariff__item tariff__item_unlocked">Обновления 1 раз в месяц</li>
+                <li class="tariff__item tariff__item_unlocked">Техническая поддержка</li>
+                <li class="tariff__item tariff__item_unlocked">Анти-Бан</li>
+                <li class="tariff__item tariff__item_unlocked">Улучшенная оптимизация</li>
+                <li class="tariff__item tariff__item_unlocked">Запуск на других телефонах</li>
+                <li class="tariff__item tariff__item_unlocked">DPI+, ASN, SKK</li>
+              </ul>
+              <div class="tariff__price">2899 <em>₽</em></div>
+              <a href="" class="tariff__buy-btn">Приобрести</a>
+            </div>
           </div>
         </div>
       </section>
       <section class="faq">
         <div class="wrapper">
-          <div class="question">
-            Какие у нас есть гарантии?
-            <span class="question__toggle"></span>
-            <div class="question__answer">
-              Мы официальные диллеры данного чита. Нам доверяет огромное количество людей. Также, Вы
-              можете посмотреть представленные скриншоты читов выше.
+          <h2 class="faq__title">Частые вопросы</h2>
+          <div class="faq__container">
+            <div class="question">
+              <div class="question__quest">
+                Какие у нас есть гарантии?
+                <span class="question__toggle"></span>
+              </div>
+              <div class="question__answer">
+                <div class="question__answer-container">
+                  Мы официальные диллеры данного чита. Нам доверяет огромное количество людей.
+                  Также, Вы можете посмотреть представленные скриншоты читов выше.
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="question">
-            Какие у нас есть гарантии?
-            <span class="question__toggle"></span>
-            <div class="question__answer">
-              Мы официальные диллеры данного чита. Нам доверяет огромное количество людей. Также, Вы
-              можете посмотреть представленные скриншоты читов выше.
+            <div class="question">
+              <div class="question__quest">
+                Какие у нас есть гарантии?
+                <span class="question__toggle"></span>
+              </div>
+              <div class="question__answer">
+                <div class="question__answer-container">
+                  Мы официальные диллеры данного чита. Нам доверяет огромное количество людей.
+                  Также, Вы можете посмотреть представленные скриншоты читов выше.
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="question">
-            Какие у нас есть гарантии?
-            <span class="question__toggle"></span>
-            <div class="question__answer">
-              Мы официальные диллеры данного чита. Нам доверяет огромное количество людей. Также, Вы
-              можете посмотреть представленные скриншоты читов выше.
+            <div class="question">
+              <div class="question__quest">
+                Какие у нас есть гарантии?
+                <span class="question__toggle"></span>
+              </div>
+              <div class="question__answer">
+                <div class="question__answer-container">
+                  Мы официальные диллеры данного чита. Нам доверяет огромное количество людей.
+                  Также, Вы можете посмотреть представленные скриншоты читов выше.
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="question">
-            Какие у нас есть гарантии?
-            <span class="question__toggle"></span>
-            <div class="question__answer">
-              Мы официальные диллеры данного чита. Нам доверяет огромное количество людей. Также, Вы
-              можете посмотреть представленные скриншоты читов выше.
+            <div class="question">
+              <div class="question__quest">
+                Какие у нас есть гарантии?
+                <span class="question__toggle"></span>
+              </div>
+              <div class="question__answer">
+                <div class="question__answer-container">
+                  Мы официальные диллеры данного чита. Нам доверяет огромное количество людей.
+                  Также, Вы можете посмотреть представленные скриншоты читов выше.
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="question">
-            Какие у нас есть гарантии?
-            <span class="question__toggle"></span>
-            <div class="question__answer">
-              Мы официальные диллеры данного чита. Нам доверяет огромное количество людей. Также, Вы
-              можете посмотреть представленные скриншоты читов выше.
+            <div class="question">
+              <div class="question__quest">
+                Какие у нас есть гарантии?
+                <span class="question__toggle"></span>
+              </div>
+              <div class="question__answer">
+                <div class="question__answer-container">
+                  Мы официальные диллеры данного чита. Нам доверяет огромное количество людей.
+                  Также, Вы можете посмотреть представленные скриншоты читов выше.
+                </div>
+              </div>
             </div>
           </div>
           <a href="#" class="question__ask">У меня есть вопрос</a>
@@ -234,41 +277,53 @@
     </main>
     <footer class="footer">
       <div class="wrapper">
-        <div class="logo">Logo</div>
-        <nav class="main-menu">
-          <ul class="main-menu__list">
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link main-menu__link_active">Главная</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Тарифы</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Отзывы</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">FAQ</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Контакты</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Функционал</a>
-            </li>
-            <li class="main-menu__item">
-              <select name="language" id="language">
-                <option value="rus">Русский</option>
-                <option value="ua">Українська</option>
-                <option value="eng">English</option>
-              </select>
-            </li>
-            <li class="main-menu__item">
-              <a href="#" class="main-menu__link">Войти</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="footer__top-line">
+          <div class="logo">Logo</div>
+          <nav class="main-menu">
+            <div class="main-menu__mobile-btn js-mobile-btn"></div>
+            <div class="logo">Logo</div>
+            <ul class="main-menu__list js-menu-list">
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link main-menu__link_current">Главная</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link">Тарифы</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link">Отзывы</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link">FAQ</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link">Контакты</a>
+              </li>
+              <li class="main-menu__item">
+                <a href="#" class="main-menu__link">Функционал</a>
+              </li>
+            </ul>
+            <div class="main-menu__btns">
+              <div class="main-menu__lang js-lang-switcher">
+                <div class="main-menu__current-lang">
+                  <img class="main-menu__flag" src="img/ru_flag.svg" alt="ru" />
+                  <span>RU</span>
+                  <img class="main-menu__carret-down" src="img/carret_down.svg" alt="Раскрыть" />
+                </div>
+                <ul class="main-menu__lang-list js-lang-list">
+                  <li class="ru">
+                    <img class="main-menu__flag" src="img/ru_flag.svg" alt="ru" /> <span>RU</span>
+                  </li>
+                  <li class="ua">UA</li>
+                  <li class="en">EN</li>
+                </ul>
+              </div>
+              <div class="main-menu__login"></div>
+            </div>
+          </nav>
+        </div>
         <div class="copyright">Защищено 2022 (C)</div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
